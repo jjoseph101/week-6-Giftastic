@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html>
 
+<!-- DOCUMENT HEAD -->
 <head>
 
 	<!-- TITLE -->
-	<title>Giftastic</title>
+	<title>GiFTASTiC</title>
 
 	<!-- VIEWPORT TO ALLOW @MEDIA ON CSS FOR MOBILE -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -18,27 +19,25 @@
 
 	<!-- LINK TO JQUERY LIBRARY -->
   	<script src="https://code.jquery.com/jquery-2.2.3.js" integrity="sha256-laXWtGydpwqJ8JA+X9x2miwmaiKhn8tVmOVEigRNtP4=" crossorigin="anonymous"></script>
-
 </head>
 
 <!-- DOCUMENT BODY -->
-<body>
+<body id="bodyDoc">
 
-	<!-- SPORTS BUTTONS -->
+	<!-- AREA FOR SPORTS BUTTONS -->
 	<div id="sportsButtons">
 	</div>
 
-	<!-- SPORTS SEARCH -->
+	<!-- AREA FOR SPORTS SEARCH -->
 	<form id="sports-form">
-  		<label class="control-label" for="focusedInput">Search More Sports</label>
+  		<label class="control-label" id ="search" for="focusedInput">Search More Sports</label>
   		<input class="form-control" id="focusedInput" type="text" value="">
-  		<input id="addSport" type="submit" value="Submit">
+  		<input data-name="submit" class="sportB" id="addSport" type="submit" value="Submit">
 	</form> 
 
-	<!-- SPORTS RESULTS -->
+	<!-- AREA FOR SPORTS RESULTS -->
 	<div id="sportsGifs">
 	</div>
-
 </body>
 
 <!-- CALL TO EXTERNAL JAVASCRIPT FILE -->
