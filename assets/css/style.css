@@ -1,5 +1,22 @@
+h1 {
+	color: white;
+	font-size: 30px;
+	text-align: center;
+}
+.buttonSpacer {
+	margin-left: 3%;
+}
+.entitle {
+	margin-top: 4%;
+}
+
 .sportB {
 	background-color:lime;
+	border-color: white;
+	margin-left: 5%;
+	margin-top:1%;
+	color: black;
+	font-weight: bold;
 }
 
 #addSport {
@@ -10,10 +27,15 @@
 	background-color: green;
 }
 
+
 #focusedInput {
 	background-color: palegreen;
+	margin-left: 3%;
+	width: 95%;
 }
 
 #search {
 	color: white;
+	margin-left: 5%;
+	margin-top: 2%;
 }
