@@ -21,6 +21,8 @@ h1 {
 
 #addSport {
 	background-color: lime;
+	margin-bottom: 10px;
+	font-size: 15px;
 }
 
 #bodyDoc {
