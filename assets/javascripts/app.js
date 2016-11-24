@@ -1,7 +1,7 @@
 //javascript
 
 //initial array of sports
-var sports = ['Golf', 'Football', 'Baseball', 'Basketball'];
+var sports = ['Golf Swing', 'Football Catch', 'Baseball Homerun', 'Basketball Dunk', 'Boxing Knockout', 'Wrestling Slam', 'Soccer Goal'];
 
 //generate buttons
 function renderButtons () {
@@ -12,7 +12,7 @@ function renderButtons () {
 	//loop through array of sports and create button for each
 	for (var i=0; i<sports.length; i++) {
 		if (sports[i]=="") { //skip empty ("") array items
-		} else {
+		} else { //make button for each item
 			var a = $('<button>');
 			a.addClass('sportB');
 			a.addClass('btn');
@@ -32,14 +32,15 @@ renderButtons();
 function clickIt () {
 	$(".sportB").on("click", function(){
 		var sportPick = $(this).data("name");
-		if (sportPick=="submit") {
+
+		if (sportPick=="submit") {//if submit button clicked...
 			var sportAdd = $('#focusedInput').val().trim();
 			sports.push(sportAdd);
 			renderButtons();
 			$('#sports-form')[0].reset();
 			clickIt();
 			return false;
-		} else {
+		} else { //if sports action item button clicked
 			var queryURL = "http://api.giphy.com/v1/gifs/search?api_key=dc6zaTOxFJmzC&"+"q="+sportPick;
 			$.ajax({url: queryURL, method: "GET"}).done(function(response){
 				console.log("SportPick "+sportPick)
@@ -57,7 +58,7 @@ function clickIt () {
 	        		sportImage.attr("data-still", results[i].images.fixed_height_still.url);
 	        		sportImage.attr("data-animate", results[i].images.fixed_height.url);
 	        		sportImage.attr("data-state", "still");
-	        		p.attr("style", "float: left; color: white; margin-left: -30%; margin-top: -5px;");
+	        		p.attr("style", "float: left; color: white; margin-left:-10%; margin-top: -5px;");
 	        		sportDiv.prepend(p);
 	        		sportDiv.prepend(sportImage);
 	       			$("#sportsGifs").prepend(sportDiv);
@@ -68,9 +69,8 @@ function clickIt () {
 	});
 };
 
-
+//click event listener for animated gifs
 $(document.body).on("click", ".gifs", function(){
-	console.log("Gif clicked");
 	var state = $(this).attr("data-state");
 	if (state=="still") {
 		$(this).attr("src", $(this).attr("data-animate"));
@@ -78,7 +78,7 @@ $(document.body).on("click", ".gifs", function(){
 	} else {
 		$(this).attr("src", $(this).attr("data-still"));
 		$(this).attr("data-state", "still");
-	}
+	};
 });
 
 clickIt ();

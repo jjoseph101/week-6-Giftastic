@@ -1,8 +1,15 @@
 h1 {
 	color: white;
-	font-size: 30px;
+	font-size: 50px;
 	text-align: center;
 }
+
+h2 {
+	color: white;
+	text-align:center;
+	font-size: 30px;
+}
+
 .buttonSpacer {
 	margin-left: 3%;
 }
@@ -26,7 +33,7 @@ h1 {
 }
 
 #bodyDoc {
-	background-color: green;
+	background-color: black;
 }
 
 
