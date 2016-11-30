@@ -41,7 +41,7 @@ function clickIt () {
 			clickIt();
 			return false;
 		} else { //if sports action item button clicked
-			var queryURL = "http://api.giphy.com/v1/gifs/search?api_key=dc6zaTOxFJmzC&"+"q="+sportPick;
+			var queryURL = "https://api.giphy.com/v1/gifs/search?api_key=dc6zaTOxFJmzC&"+"q="+sportPick;
 			$.ajax({url: queryURL, method: "GET"}).done(function(response){
 				console.log("SportPick "+sportPick)
 				var results = response.data;
