@@ -15,6 +15,9 @@ h2 {
 }
 .entitle {
 	margin-top: 4%;
+	border-color: white;
+	border-style: solid;
+	border-width: 3px;
 }
 
 .sportB {

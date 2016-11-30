@@ -1,6 +1,6 @@
 //javascript
 
-//initial array of sports
+//initial array of sports moves
 var sports = ['Golf Swing', 'Football Catch', 'Baseball Homerun', 'Basketball Dunk', 'Boxing Knockout', 'Wrestling Slam', 'Soccer Goal'];
 
 //generate buttons
@@ -46,7 +46,7 @@ function clickIt () {
 				console.log("SportPick "+sportPick)
 				var results = response.data;
 				console.log(results);
-				for (var i=0; i < 10; i++) {
+				for (var i=0; i < 10; i++) { //loop to run for first 10 gifs from api data
 					var sportDiv = $("<div>");
 	        		var rating = results[i].rating;
 	        		var p = $("<p>").text("Rating: " + rating);
@@ -72,13 +72,13 @@ function clickIt () {
 //click event listener for animated gifs
 $(document.body).on("click", ".gifs", function(){
 	var state = $(this).attr("data-state");
-	if (state=="still") {
+	if (state=="still") { //make pic animate
 		$(this).attr("src", $(this).attr("data-animate"));
 		$(this).attr("data-state", "animate");
-	} else {
+	} else { //make pic still
 		$(this).attr("src", $(this).attr("data-still"));
 		$(this).attr("data-state", "still");
 	};
 });
 
-clickIt ();
+clickIt (); //function to capture button click
